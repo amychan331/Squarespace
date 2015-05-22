@@ -1,0 +1,62 @@
+<!-- Version 1: Originally when both contact and social media information is placed at footer -->
+<!-- CODE PLACED IN DESIGN => CUSTOM CSS -->
+<style>
+#socialIcon a:hover
+{
+  opacity: 0.4;
+  filter: alpha(opacity=40); // IE 5-7
+}
+#socialIcon a
+{
+  margin:10px; 
+}
+
+</style>
+
+<!-- PAGE => FOOTER CONTENT => EDIT => CODE BLOCK -->
+<!-- HTML & JS for the social icon buttons. Icon images are found in page "Social Icon" -->
+<!-- Facebook --!>
+<div id="socialIcon">
+<a href="https://www.facebook.com/DigitalActionHub" target=_blank >
+<img src="https://static1.squarespace.com/static/54ed3e0ae4b07c01c5ceadf6/554299d9e4b00f9b9e17ca3d/55470804e4b0a65de4f71492/1430718525809/facebookicon.png?format=500w" class="facebookIcon" alt="Digital Action Hub's Facebook Page"></a>
+<!-- Twitter --!>
+<a href="https://twitter.com/Digital_Action_" target=_blank >
+<img src="https://static1.squarespace.com/static/54ed3e0ae4b07c01c5ceadf6/554299d9e4b00f9b9e17ca3d/55470144e4b0a1a9aa01ce95/1430716740635/twittericon.png?format=500w" class="twitterIcon" alt="Digital Action Hub's Twitter Site"></a>
+<!-- Mailchimp Subscription --!>
+<a href="#"><img src="https://static1.squarespace.com/static/54ed3e0ae4b07c01c5ceadf6/554299d9e4b00f9b9e17ca3d/55431aa5e4b06c7d81038e06/1430461093785/SubscriptionIcon.png?format=500w" class="subscribeIcon" onclick="subscribe();return false;"></a>
+</div>
+<script src="//s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
+<script>
+function subscribe() {
+  document.cookie = 'MCEvilPopupClosed=;path=/;expires=Thu, 01 Jan 1970 00:00:00 UTC;';
+  require(["mojo/signup-forms/Loader"], function(L) { 
+    L.start({
+      "baseUrl":"mc.us9.list-manage.com",
+      "uuid":"393284ec088606d31f19cc337",
+      "lid":"ffaba1b644"
+    }) 
+  })
+}
+</script>
+
+<!-- Codes to display contact information while still diguised from search engines. 
+Note that XXX has been placed for content info here since Github is open to search engines. -->
+<style>
+#contactInfo { 
+  text-align: center;
+  margin: 0;
+  padding: 0;}
+#contactInfo a:link { color: white; }
+#contactInfo a:visited { color: white; }
+</style>
+<div id="contactInfo">
+Digital Action Hub  
+<br><br><script>
+var usr = "XXX";
+var host = "XXX";
+var emailAdd = usr + "@" + host ;
+var locationAdd = "XXX"
+document.write("<a href='" + "mail" + "to:" + usr + "@" + host + "'>" + emailAdd + "</a>  |  " + locationAdd);
+</script>
+</div>
+</script>

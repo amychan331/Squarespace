@@ -1,0 +1,90 @@
+<!-- Version 2: When social media button is placed as a side floating box -->
+<!-- CODE PLACED IN DESIGN => CUSTOM CSS -->
+#socialBox {
+  height: 150px;
+  width: 40px;
+  background-color: #fff;
+  opacity: 0.8;
+  filter: alpha(opacity=80); // IE 5-7
+  position: fixed;
+  padding: 10px;
+  margin: 125px 0 0 0;
+  float: left;
+  z-index: 1000;
+}
+
+.socialIcon {
+  clear: both;
+  padding-bottom: 50px;
+  margin: auto;
+}
+.socialIcon a:hover {
+  opacity: 0.4;
+  filter: alpha(opacity=40); // IE 5-7
+}
+
+<!-- CODE PLACED IN SETTING => ADVANCED => CODE INJECTION => HEADER -->
+<!-- Code for Mailchimp Subscription LIghtbox -->
+<script src="//s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
+<script>
+function subscribe() {
+  document.cookie = 'MCEvilPopupClosed=;path=/;expires=Thu, 01 Jan 1970 00:00:00 UTC;';
+  require(["mojo/signup-forms/Loader"], function(L) { 
+    L.start({
+      "baseUrl":"mc.us9.list-manage.com",
+      "uuid":"393284ec088606d31f19cc337",
+      "lid":"ffaba1b644"
+    }) 
+  })
+}
+</script>
+
+<!-- Loads Font Awesome for the social media icon -->
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+<!-- Social media bar html codes -->
+<div id="socialBox">
+  <div class="fa-stack fa-lg">
+    <div class="socialIcon">
+        <a href="https://www.facebook.com/DigitalActionHub" target="_blank">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+        </a>
+    </div>
+    <div class="socialIcon">
+        <a href="http://twitter.com/Digital_Action_" target="_blank">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+        </a>
+    </div>
+    <div class="socialIcon">
+        <a href="#" onclick="subscribe()">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-newspaper-o fa-stack-1x fa-inverse"></i>
+        </a>
+    </div>
+  </div>
+</div>
+
+<!-- CODE PLACED IN PAGE => FOOTER CONTENT => EDIT => CODE BLOCK -->
+<!-- Codes to display contact information while still diguised from search engines. 
+Note that XXX has been placed for content info here since Github is open to search engines. -->
+<style>
+#contactInfo { 
+  text-align: center;
+  margin: 0;
+  padding: 0;}
+#contactInfo a:link { color: white; }
+#contactInfo a:visited { color: white; }
+</style>
+<div id="contactInfo">
+Digital Action Hub  
+<br><br><script>
+var usr = "XXX";
+var host = "XXX";
+var emailAdd = usr + "@" + host ;
+var locationAdd = "XXX"
+document.write("<a href='" + "mail" + "to:" + usr + "@" + host + "'>" + emailAdd + "</a>  |  " + locationAdd);
+</script>
+</div>
+</script>
