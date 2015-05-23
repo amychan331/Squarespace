@@ -1,19 +1,19 @@
 <!-- Version 2: When social media button is placed as a side floating box -->
 <!-- CODE PLACED IN DESIGN => CUSTOM CSS -->
 #socialBox {
-  height: 150px;
-  width: 40px;
+  height: 154px;
+  width: 35px;
   background-color: #fff;
   opacity: 0.8;
   filter: alpha(opacity=80); // IE 5-7
   position: fixed;
-  padding: 10px;
+  padding: 12px;
   float: left;
   z-index: 1000;
 }
 .socialIcon {
   clear: both;
-  padding-bottom: 50px;
+  padding-bottom: 58px;
   margin: auto;
 }
 .socialIcon a:hover {
@@ -35,7 +35,7 @@
 
 /* To remove the large awkward space in the footer */
 .footer-inner {
-  padding: 0px;
+  padding: 0 0 10px 0;
 }
 
 <!-- CODE PLACED IN SETTING => ADVANCED => CODE INJECTION => HEADER -->
