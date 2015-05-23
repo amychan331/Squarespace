@@ -8,11 +8,9 @@
   filter: alpha(opacity=80); // IE 5-7
   position: fixed;
   padding: 10px;
-  margin: 125px 0 0 0;
   float: left;
   z-index: 1000;
 }
-
 .socialIcon {
   clear: both;
   padding-bottom: 50px;
@@ -21,6 +19,23 @@
 .socialIcon a:hover {
   opacity: 0.4;
   filter: alpha(opacity=40); // IE 5-7
+}
+
+#contactInfo { 
+  color: white;
+  text-align: center;
+  padding-top: 10px;
+}
+#contactInfo a:link { 
+  color: white; 
+}
+#contactInfo a:visited { 
+  color: white; 
+}
+
+/* To remove the large awkward space in the footer */
+.footer-inner {
+  padding: 0px;
 }
 
 <!-- CODE PLACED IN SETTING => ADVANCED => CODE INJECTION => HEADER -->
@@ -41,6 +56,18 @@ function subscribe() {
 
 <!-- Loads Font Awesome for the social media icon -->
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+<!-- jQuery to keep social media bar below header -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="scripts/jquery-2.0.0.min.js"><\/script>')</script>
+<script>
+  $(document).ready (
+    function() {
+      $('#socialBox').insertAfter('#header');
+      $('#contactInfo').insertBefore('.footer-inner');
+    }
+  );
+</script>
 
 <!-- Social media bar html codes -->
 <div id="socialBox">
@@ -66,7 +93,7 @@ function subscribe() {
   </div>
 </div>
 
-<!-- CODE PLACED IN PAGE => FOOTER CONTENT => EDIT => CODE BLOCK -->
+<!-- CODE PLACED IN SETTING => ADVANCED => CODE INJECTION => FOOTER -->
 <!-- Codes to display contact information while still diguised from search engines. 
 Note that XXX has been placed for content info here since Github is open to search engines. -->
 <style>
