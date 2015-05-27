@@ -1,5 +1,17 @@
 <!-- Version 2: When social media button is placed as a side floating box -->
 <!-- CODE PLACED IN DESIGN => CUSTOM CSS -->
+#loadError p {
+  color: white;
+  text-align: center;
+  background-color: #d55c15;
+  padding: 5px;
+  margin: auto;
+  width: 100%;
+  position: fixed;
+  clear: both;
+  z-index: 50000;
+}
+
 #socialBox {
   height: 154px;
   width: 35px;
@@ -39,6 +51,39 @@
 }
 
 <!-- CODE PLACED IN SETTING => ADVANCED => CODE INJECTION => HEADER -->
+<!-- Load jQuery, Modernizr, and Font Awsome libraries-->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="scripts/jquery-2.0.0.min.js"><\/script>')</script>
+<!-- Note: While Squarespace preinstalled Modernizr, it's outdated, so I am linking it externally. (05/27/2015)-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+<!-- Error messge for incompatibility issues -->
+<div id="loadError">
+  <noscript>
+    <p>Javascript needed to be enabled for full access to this site. Please enable Javascript in your browser and refresh the page for best viewing experience.</p>
+  </noscript>
+  <!--[if lte IE 8]>
+    <p>Internet Explorer 8+ needed to enable full access to this site. Please update your browser for best viewing experience.</p>
+  <![endif]-->
+  <script> 
+    $(document).ready(
+      function() {
+        if ( Modernizr.draganddrop && Modernizr.webworkers && Modernizr.video ){
+          //Feature testing using Modernizr.
+        } else {
+          $('#loadError').append("<p> Newer browser needed to enable full access to this site. Please update your browser for best viewing experience.</p>");
+        }
+      }
+    );
+  </script>
+  <!-- [if lte IE 8]>
+    Your browser needs to be newer than Internet Explorer 8 to display this page.
+  <![endif]-->
+  <squarespace:script src="Modernizr.js" combo="true" />
+  <script src="js/modernizr-2.8.3.min.js"></script>
+</div>
+
 <!-- Code for Mailchimp Subscription LIghtbox -->
 <script src="//s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
 <script>
@@ -54,12 +99,7 @@ function subscribe() {
 }
 </script>
 
-<!-- Loads Font Awesome for the social media icon -->
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-
 <!-- jQuery to keep social media bar below header -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="scripts/jquery-2.0.0.min.js"><\/script>')</script>
 <script>
   $(document).ready (
     function() {
