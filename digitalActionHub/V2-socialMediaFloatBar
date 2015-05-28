@@ -5,9 +5,9 @@
   text-align: center;
   background-color: #d55c15;
   padding: 5px;
-  margin: auto;
+  margin-top: 0px;
   width: 100%;
-  position: fixed;
+  position: relative;
   clear: both;
   z-index: 50000;
 }
@@ -61,10 +61,10 @@
 <!-- Error messge for incompatibility issues -->
 <div id="loadError">
   <noscript>
-    <p>Javascript needed to be enabled for full access to this site. Please enable Javascript in your browser and refresh the page for best viewing experience.</p>
+    <p>Javascript needed to be enabled for full site access. Please enable Javascript and refresh for best viewing experience.</p>
   </noscript>
   <!--[if lte IE 8]>
-    <p>Internet Explorer 8+ needed to enable full access to this site. Please update your browser for best viewing experience.</p>
+    <p>Internet Explorer 8+ needed to enable full site access. Please update browser for best viewing experience.</p>
   <![endif]-->
   <script> 
     $(document).ready(
@@ -72,19 +72,19 @@
         if ( Modernizr.draganddrop && Modernizr.webworkers && Modernizr.video ){
           //Feature testing using Modernizr.
         } else {
-          $('#loadError').append("<p> Newer browser needed to enable full access to this site. Please update your browser for best viewing experience.</p>");
+          $('#loadError').append("<p> Newer browser needed to enable full site access. Please update browser for best viewing experience.</p>");
         }
       }
     );
+    
   </script>
   <!-- [if lte IE 8]>
     Your browser needs to be newer than Internet Explorer 8 to display this page.
   <![endif]-->
-  <squarespace:script src="Modernizr.js" combo="true" />
   <script src="js/modernizr-2.8.3.min.js"></script>
 </div>
 
-<!-- Code for Mailchimp Subscription LIghtbox -->
+<!-- Code for Mailchimp Subscription Lightbox -->
 <script src="//s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
 <script>
 function subscribe() {
@@ -99,7 +99,7 @@ function subscribe() {
 }
 </script>
 
-<!-- jQuery to keep social media bar below header -->
+<!-- jQuery to ensure div are placed in correct position -->
 <script>
   $(document).ready (
     function() {
