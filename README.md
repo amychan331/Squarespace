@@ -13,7 +13,9 @@ Code injection was used for the following reasons:
 Here are the final production. The Event section is empty because there are no upcoming events at the time: 
 
 Desktop View:
+<br />
 <img src="https://github.com/amychan331/schoolProject-Squarespace/blob/master/images/desktopView.png" alt="Desktop View" style="width: 474px; height: 650px;" />
-
+<br />
 Mobile View:
+<br />
 <img src="https://github.com/amychan331/schoolProject-Squarespace/blob/master/images/mobileView.png" alt="Mobile View" style="width: 320px; height: 2174px;" />
