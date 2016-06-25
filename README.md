@@ -11,6 +11,7 @@ Code injection was used for the following reasons:
 3) Public contact information: Though not required, I decided to do JS injection to prevent bots from search engine.
 
 Here are the final production. The Event section is empty because there are no upcoming events at the time: 
+
 Desktop View:
 ![Desktop View](https://github.com/amychan331/schoolProject-Squarespace/blob/master/images/desktopView.png)
 Mobile View:
